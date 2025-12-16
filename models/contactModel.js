@@ -13,7 +13,7 @@ const contactSchema = mongoose.Schema(
     },
     phone: {
       type: String,
-      required: [true, "Phone is required"],
+      required: [true, "Phone no. is required"],
       unique: true,
     },
   },
@@ -21,3 +21,5 @@ const contactSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+module.exports = mongoose.model("Contact", contactSchema); 
