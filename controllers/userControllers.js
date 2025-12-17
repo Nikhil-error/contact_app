@@ -67,7 +67,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@route /api/users/current
 //Private
 const getCurrentUser = asyncHandler(async (req, res) => {
-  res.json({ message: "Current User Page" });
+  res.json(req.user);
 });
 
 module.exports = {
